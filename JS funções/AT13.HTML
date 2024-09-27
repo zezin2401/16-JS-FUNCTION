@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIV 13</title>
+</head>
+<body>
+
+    <script>
+        function embaralharPalavra(palavra) {
+            const letras = palavra.toUpperCase().split('');
+            for (let i = letras.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [letras[i], letras[j]] = [letras[j], letras[i]];
+            }
+            return letras.join('');
+        }
+
+        const palavraInput = "calopsita";
+        const palavraEmbaralhada = embaralharPalavra(palavraInput);
+        alert(palavraEmbaralhada);
+    </script>
+
+</body>
+</html>

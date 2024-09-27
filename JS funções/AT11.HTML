@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIV 11</title>
+</head>
+<body>
+
+    <script>
+        function rolarDados() {
+            return Math.floor(Math.random() * 6) + 1 + Math.floor(Math.random() * 6) + 1;
+        }
+
+        function jogarCraps() {
+            const primeiraJogada = rolarDados();
+            let ponto;
+
+            if (primeiraJogada === 7 || primeiraJogada === 11) {
+                alert("Você ganhou com " + primeiraJogada + "!");
+            } else if (primeiraJogada === 2 || primeiraJogada === 3 || primeiraJogada === 12) {
+                alert("Você perdeu com " + primeiraJogada + ".");
+            } else {
+                ponto = primeiraJogada;
+                alert("Ponto: " + ponto + ". Tente tirá-lo novamente.");
+                
+                while (true) {
+                    const novaJogada = rolarDados();
+                    alert("Você rolou " + novaJogada + ".");
+                    if (novaJogada === ponto) {
+                        alert("Você ganhou!");
+                        break;
+                    } else if (novaJogada === 7) {
+                        alert("Você perdeu!");
+                        break;
+                    }
+                }
+            }
+        }
+
+        jogarCraps();
+    </script>
+
+</body>
+</html>

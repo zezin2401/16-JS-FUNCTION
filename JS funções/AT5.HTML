@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV 5</title>
+</head>
+<body>
+    
+    <script>
+
+        function valorNumerico(a, b, operador) { 
+            const operacoes = {
+                '+': (a, b) => a + b,
+                '-': (a, b) => a - b,
+                '*': (a, b) => a * b,
+                '/': (a, b) => a / b
+            };
+
+            if (operacoes[operador]) {
+                alert(operacoes[operador](a, b));
+            } else {
+                alert('Operação inválida');
+            }
+        }
+
+        valorNumerico(10, 20, '+');
+
+
+    </script>
+
+</body>
+</html>

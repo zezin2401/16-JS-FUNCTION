@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIV 4</title>
+</head>
+<body>
+    <script>
+       
+        function notas(nota1, nota2, nota3, letra) {
+            letra = String(letra)
+
+
+            if (letra == "A") {
+                soma = nota1 + nota2 + nota3
+                resultado = soma / 3
+                return resultado
+            } else {
+                notap1 = nota1 * 5
+                notap2 = nota2 * 3
+                notap3 = nota3 *2
+
+
+                somap = notap1 + notap2 + notap3
+                mediaponderada = somap / 10
+            }
+
+
+            return mediaponderada
+           
+        }
+
+
+       
+        alert(notas(7, 8, 5, "P"))
+
+
+    </script>
+   
+</body>
+</html>
